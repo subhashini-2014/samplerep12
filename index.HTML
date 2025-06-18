@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e0f7fa;
+      text-align: center;
+      padding: 50px;
+    }
+    #quote-box {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #00796b;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="quote-box">
+    <h2>Random Quote</h2>
+    <p id="quote">Click the button to see a quote!</p>
+    <button onclick="newQuote()">Get Quote</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "Believe in yourself and all that you are.",
+      "Don’t watch the clock; do what it does. Keep going.",
+      "Dream big and dare to fail.",
+      "Start where you are. Use what you have. Do what you can.",
+      "Everything you can imagine is real."
+    ];
+
+    function newQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').innerText = quotes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
+
